@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Korporativ Sayt - Sizning biznesingiz uchun yuqori sifatli xizmatlar va mahsulotlar.">
+  <meta name="keywords" content="korporativ sayt, xizmatlar, mahsulotlar, biznes, Tashkent">
+  <meta name="author" content="Husniddin Jabborov">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Korporativ Sayt">
+  <meta property="og:description"
+    content="Korporativ Sayt - Sizning biznesingiz uchun yuqori sifatli xizmatlar va mahsulotlar.">
+  <meta property="og:image" content="https://picsum.photos/100">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="https://picsum.photos/100">
+  <meta name="twitter:title" content="Korporativ Sayt">
+  <meta name="twitter:description"
+    content="Korporativ Sayt - Sizning biznesingiz uchun yuqori sifatli xizmatlar va mahsulotlar.">
+  <meta name="twitter:image" content="https://picsum.photos/100">
+  <link rel="icon" href="https://picsum.photos/100" type="image/x-icon">
+
+  <title>Korporativ Navbar</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="modal fade" id="konsaltingModal" tabindex="-1" aria-labelledby="konsaltingModalLabel"
+    aria-describedby="konsaltingModalDescription" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="konsaltingModalLabel">Biznes Konsalting</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Konsalting Modal"></button>
+        </div>
+        <div class="modal-body" id="konsaltingModalDescription">
+          Biznesingizni rivojlantirish uchun bizning konsalting xizmatlarimiz haqida batafsil ma'lumot olishingiz
+          mumkin.
+          Biz sizga moliyaviy maslahatlar, marketing strategiyalari, va texnologik yechimlar taklif etamiz.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            aria-label="Konsalting Modalni yopish">Yopish</button>
+          <button type="button" class="btn btn-primary" aria-describedby="konsaltingModalDescription"
+            aria-label="Konsalting xizmatlari uchun bog‘lanish">Bog'lanish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="implementModal" tabindex="-1" aria-labelledby="implementModalLabel"
+    aria-describedby="implementModalDescription" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="implementModalLabel">Implementatsiya Xizmatlari</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Implement Modal"></button>
+        </div>
+        <div class="modal-body" id="implementModalDescription">
+          Bizning implementatsiya xizmatlarimiz orqali siz loyihangizni muvaffaqiyatli amalga oshirishingiz mumkin. Har
+          bir bosqichni professional tarzda kuzatib boramiz va natijalarga tez erishish uchun aniq yechimlar taklif
+          etamiz.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            aria-label="Implement Modalni yopish">Yopish</button>
+          <button type="button" class="btn btn-primary" aria-describedby="implementModalDescription"
+            aria-label="Implementatsiya xizmatlari uchun bog‘lanish">Bog'lanish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel"
+    aria-describedby="supportModalDescription" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="supportModalLabel">Qo'llab-quvvatlash Xizmatlari</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close Support Modal"></button>
+        </div>
+        <div class="modal-body" id="supportModalDescription">
+          Bizning qo'llab-quvvatlash xizmatlarimiz sizning barcha ehtiyojlaringiz uchun mavjud. Har qanday savollar,
+          muammolar yoki texnik yordam uchun 24/7 aloqada bo'lamiz. Tez va samarali yordam berish uchun barcha
+          vositalarga egamiz.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            aria-label="Support Modalni yopish">Yopish</button>
+          <button type="button" class="btn btn-primary" aria-describedby="supportModalDescription"
+            aria-label="Qo'llab-quvvatlash xizmatlari uchun bog‘lanish">Bog'lanish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top" aria-label="Navigatsiya paneli">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold text-white fs-4" href="#" aria-label="Korporativ brendga o'tish"
+        tabindex="0">Korporativ</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Navigatsiyani ochish" tabindex="0">
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" aria-labelledby="navbarSupportedContentLabel">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" aria-label="Navigatsiya menyusi">
+          <li class="nav-item">
+            <a class="nav-link active text-white fw-medium fs-6" aria-current="page" href="#"
+              aria-label="Bosh sahifaga o'tish" tabindex="0">Bosh sahifa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#xizmatlar" aria-label="Xizmatlar bo'limiga o'tish"
+              tabindex="0">Xizmatlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#mijozlar" aria-label="Mijozlar bo'limiga o'tish"
+              tabindex="0">Mijozlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#yangiliklar" aria-label="Yangiliklar bo'limiga o'tish"
+              tabindex="0">Yangiliklar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#tariflar" aria-label="Tariflar bo'limiga o'tish"
+              tabindex="0">Tariflar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#jamoa" aria-label="Jamoa bo'limiga o'tish"
+              tabindex="0">Jamoa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-medium fs-6" href="#aloqa" aria-label="Aloqa bo'limiga o'tish"
+              tabindex="0">Aloqa</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white fw-medium fs-6" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false" aria-label="Yechimlar bo'limi" tabindex="0">
+              Yechimlar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li data-bs-toggle="modal" data-bs-target="#konsaltingModal">
+                <a class="dropdown-item" href="#" aria-label="Konsalting xizmatlariga o'tish"
+                  tabindex="0">Konsalting</a>
+              </li>
+              <li data-bs-toggle="modal" data-bs-target="#implementModal">
+                <a class="dropdown-item" href="#" aria-label="Implementatsiya xizmatlariga o'tish"
+                  tabindex="0">Implementatsiya</a>
+              </li>
+              <li data-bs-toggle="modal" data-bs-target="#supportModal">
+                <a class="dropdown-item" href="#" aria-label="Qo'llab-quvvatlash xizmatlariga o'tish"
+                  tabindex="0">Qo'llab-quvvatlash</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn bg-warning text-muted fw-medium fs-6" type="button" aria-label="Taklif olish tugmasi"
+            tabindex="0">Taklif olish</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="hero-section" aria-labelledby="heroSectionLabel">
+    <div class="container container-flex">
+      <div class="hero-content text-center text-lg-start text-white" id="heroSectionLabel">
+        <h1 class="display-1 fw-bold text-uppercase mb-4" aria-label="Biznesingizga Yangi Ufqlarni Oching" tabindex="0">
+          Biznesingizga Yangi Ufqlarni Oching</h1>
+        <p class="lead mb-4 fs-4" aria-label="Bizning innovatsion yondashuvimiz biznesingizni kelajak sari olib boradi."
+          tabindex="0">Bizning innovatsion yondashuvimiz biznesingizni kelajak sari olib boradi.</p>
+        <a href="#xizmatlar" class="btn btn-primary btn-lg text-uppercase px-5 py-3"
+          aria-label="Xizmatlarimiz sahifasiga o'tish" tabindex="0">Xizmatlarimiz</a>
+      </div>
+      <div class="hero-content-imgs" aria-label="Banner rasm to'plami" tabindex="0">
+        <img src="https://picsum.photos/400/300?random=1" alt="banner img" loading="eager" aria-label="Banner rasmi 1"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=2" alt="banner img" loading="eager" aria-label="Banner rasmi 2"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=3" alt="banner img" loading="eager" aria-label="Banner rasmi 3"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=4" alt="banner img" loading="eager" aria-label="Banner rasmi 4"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=5" alt="banner img" loading="eager" aria-label="Banner rasmi 5"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=6" alt="banner img" loading="eager" aria-label="Banner rasmi 6"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=1" alt="banner img" loading="eager" aria-label="Banner rasmi 1"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=2" alt="banner img" loading="eager" aria-label="Banner rasmi 2"
+          tabindex="0">
+        <img src="https://picsum.photos/400/300?random=1" alt="banner img" loading="eager" aria-label="Banner rasmi 1"
+          tabindex="0">
+      </div>
+    </div>
+  </section>
+
+  <section id="xizmatlar" class="services-section py-5" aria-labelledby="servicesLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="servicesLabel" tabindex="0">Bizning Xizmatlarimiz</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="Biznes Konsalting xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=1" class="card-img-top" alt="Biznes Konsalting"
+              loading="lazy" aria-label="Biznes Konsalting rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Biznes Konsalting" tabindex="0">Biznes Konsalting</h5>
+              <p class="card-text"
+                aria-label="Biznesingizni rivojlantirishga yordam beradigan professional maslahatlar." tabindex="0">
+                Biznesingizni rivojlantirishga yordam beradigan professional maslahatlar.</p>
+              <a href="#" class="btn btn-primary" aria-label="Biznes Konsalting haqida batafsil"
+                tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="Marketing Strategiyalari xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=2" class="card-img-top" alt="Marketing Strategiyalari"
+              loading="lazy" aria-label="Marketing Strategiyalari rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Marketing Strategiyalari" tabindex="0">Marketing Strategiyalari</h5>
+              <p class="card-text"
+                aria-label="Sizning mahsulot va xizmatlaringizni yanada ko'proq foydalanuvchilarga yetkazish uchun strategiyalar."
+                tabindex="0">Sizning mahsulot va xizmatlaringizni yanada ko'proq foydalanuvchilarga yetkazish uchun
+                strategiyalar.</p>
+              <a href="#" class="btn btn-primary" aria-label="Marketing Strategiyalari haqida batafsil"
+                tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="Veb Dasturlash xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=3" class="card-img-top" alt="Veb Dasturlash" loading="lazy"
+              aria-label="Veb Dasturlash rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Veb Dasturlash" tabindex="0">Veb Dasturlash</h5>
+              <p class="card-text" aria-label="Biznesingiz uchun sifatli veb saytlari yaratish va rivojlantirish."
+                tabindex="0">Biznesingiz uchun sifatli veb saytlari yaratish va rivojlantirish.</p>
+              <a href="#" class="btn btn-primary" aria-label="Veb Dasturlash haqida batafsil" tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="Ijtimoiy Tarmoq Boshqaruvi xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=4" class="card-img-top" alt="Ijtimoiy Tarmoq Boshqaruvi"
+              loading="lazy" aria-label="Ijtimoiy Tarmoq Boshqaruvi rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Ijtimoiy Tarmoq Boshqaruvi" tabindex="0">Ijtimoiy Tarmoq Boshqaruvi
+              </h5>
+              <p class="card-text" aria-label="Ijtimoiy tarmoqlarda brendingizni rivojlantirish va kengaytirish."
+                tabindex="0">Ijtimoiy tarmoqlarda brendingizni rivojlantirish va kengaytirish.</p>
+              <a href="#" class="btn btn-primary" aria-label="Ijtimoiy Tarmoq Boshqaruvi haqida batafsil"
+                tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="SEO Optimallashtirish xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=5" class="card-img-top" alt="SEO Optimallashtirish"
+              loading="lazy" aria-label="SEO Optimallashtirish rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="SEO Optimallashtirish" tabindex="0">SEO Optimallashtirish</h5>
+              <p class="card-text" aria-label="Veb saytlaringizni qidiruv tizimlarida yuqori o'rinlarga ko'tarish."
+                tabindex="0">Veb saytlaringizni qidiruv tizimlarida yuqori o'rinlarga ko'tarish.</p>
+              <a href="#" class="btn btn-primary" aria-label="SEO Optimallashtirish haqida batafsil"
+                tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 spin scale" tabindex="0" aria-label="Brendni Rivojlantirish xizmati">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=6" class="card-img-top" alt="Brendni Rivojlantirish"
+              loading="lazy" aria-label="Brendni Rivojlantirish rasmi">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Brendni Rivojlantirish" tabindex="0">Brendni Rivojlantirish</h5>
+              <p class="card-text" aria-label="Brendingizni yaratish va rivojlantirish uchun to'liq yechimlar."
+                tabindex="0">Brendingizni yaratish va rivojlantirish uchun to'liq yechimlar.</p>
+              <a href="#" class="btn btn-primary" aria-label="Brendni Rivojlantirish haqida batafsil"
+                tabindex="0">Batafsil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="mijozlar" class="testimonials-section py-5 bg-light" aria-labelledby="testimonialsLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="testimonialsLabel" tabindex="0">Mijozlarimiz Fikri</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Mijoz Anvar Usmonovning fikri">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <img src="https://picsum.photos/100?random=7" class="rounded-circle mb-3" alt="Anvar Usmonov"
+                loading="lazy" aria-label="Mijoz Anvar Usmonov rasmi">
+              <h5 class="card-title" aria-label="Anvar Usmonov" tabindex="0">Anvar Usmonov</h5>
+              <p class="card-text"
+                aria-label="Kompaniyaning xizmatlari bizni juda qoniqtirdi. Yondashuv juda professional va samarali."
+                tabindex="0">"Kompaniyaning xizmatlari bizni juda qoniqtirdi. Yondashuv juda professional va samarali."
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Mijoz Madina Rasulovaning fikri">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <img src="https://picsum.photos/100?random=8" class="rounded-circle mb-3" alt="Madina Rasulova"
+                loading="lazy" aria-label="Mijoz Madina Rasulova rasmi">
+              <h5 class="card-title" aria-label="Madina Rasulova" tabindex="0">Madina Rasulova</h5>
+              <p class="card-text"
+                aria-label="Men bunday tezkor va sifatli xizmatni uzoq vaqt qidirgan edim. Hozir esa topdim."
+                tabindex="0">"Men bunday tezkor va sifatli xizmatni uzoq vaqt qidirgan edim. Hozir esa topdim."</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Mijoz Jasur Rahmonovning fikri">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <img src="https://picsum.photos/100?random=9" class="rounded-circle mb-3" alt="Jasur Rahmonov"
+                loading="lazy" aria-label="Mijoz Jasur Rahmonov rasmi">
+              <h5 class="card-title" aria-label="Jasur Rahmonov" tabindex="0">Jasur Rahmonov</h5>
+              <p class="card-text"
+                aria-label="Kompaniya tomonidan ko'rsatilgan yechimlar biznesimizni yangi darajaga olib chiqdi."
+                tabindex="0">"Kompaniya tomonidan ko'rsatilgan yechimlar biznesimizni yangi darajaga olib chiqdi."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="yangiliklar" class="news-section py-5 bg-light" aria-labelledby="newsLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="newsLabel" tabindex="0">Yangiliklarimiz</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Yangi Hamkorlik">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=7" class="card-img-top" alt="Yangi Hamkorlik" loading="lazy"
+              aria-label="Yangilik: Yangi Hamkorlik rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Yangi Hamkorlik" tabindex="0">Yangi Hamkorlik</h5>
+              <p class="card-text"
+                aria-label="Bizning kompaniya yangi hamkor bilan ish boshladi. Bu hamkorlik orqali biz xizmatlarimizni kengaytiramiz."
+                tabindex="0">Bizning kompaniya yangi hamkor bilan ish boshladi. Bu hamkorlik orqali biz xizmatlarimizni
+                kengaytiramiz.</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Yilning Yangi Loyihasi">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=8" class="card-img-top" alt="Yilning Yangi Loyihasi"
+              loading="lazy" aria-label="Yangilik: Yilning Yangi Loyihasi rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Yilning Yangi Loyihasi" tabindex="0">Yilning Yangi Loyihasi</h5>
+              <p class="card-text"
+                aria-label="Biz yangi loyiha ustida ish olib bormoqdamiz, u sizning ehtiyojlaringizni qondirishga mo'ljallangan."
+                tabindex="0">Biz yangi loyiha ustida ish olib bormoqdamiz, u sizning ehtiyojlaringizni qondirishga
+                mo'ljallangan.</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Mijozlar Sharhlari">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=9" class="card-img-top" alt="Mijozlar Sharhlari"
+              loading="lazy" aria-label="Yangilik: Mijozlar Sharhlari rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Mijozlar Sharhlari" tabindex="0">Mijozlar Sharhlari</h5>
+              <p class="card-text"
+                aria-label="Bizning mijozlarimizdan bir nechtasi o'zlarining ijobiy fikrlarini bildirishdi. Siz ham fikringizni qoldirishingiz mumkin!"
+                tabindex="0">Bizning mijozlarimizdan bir nechtasi o'zlarining ijobiy fikrlarini bildirishdi. Siz ham
+                fikringizni qoldirishingiz mumkin!</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Mahsulot Yangilanishi">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=10" class="card-img-top" alt="Mahsulot Yangilanishi"
+              loading="lazy" aria-label="Yangilik: Mahsulot Yangilanishi rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Mahsulot Yangilanishi" tabindex="0">Mahsulot Yangilanishi</h5>
+              <p class="card-text"
+                aria-label="Bizning mahsulotlarimizda yangi funksiyalar va imkoniyatlar qo'shildi. Sizni yangiliklar bilan tanishtiramiz!"
+                tabindex="0">Bizning mahsulotlarimizda yangi funksiyalar va imkoniyatlar qo'shildi. Sizni yangiliklar
+                bilan tanishtiramiz!</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Sanoat Yarmarkasi">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=11" class="card-img-top" alt="Sanoat Yarmarkasi"
+              loading="lazy" aria-label="Yangilik: Sanoat Yarmarkasi rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Sanoat Yarmarkasi" tabindex="0">Sanoat Yarmarkasi</h5>
+              <p class="card-text"
+                aria-label="Bizning kompaniya yurtimizda o'tkazilayotgan sanoat yarmarkasida ishtirok etadi. Sizni kutamiz!"
+                tabindex="0">Bizning kompaniya yurtimizda o'tkazilayotgan sanoat yarmarkasida ishtirok etadi. Sizni
+                kutamiz!</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Uchrashuv Yangiliklari">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=12" class="card-img-top" alt="Uchrashuv Yangiliklari"
+              loading="lazy" aria-label="Yangilik: Uchrashuv Yangiliklari rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Uchrashuv Yangiliklari" tabindex="0">Uchrashuv Yangiliklari</h5>
+              <p class="card-text"
+                aria-label="Kompaniyamizning keyingi uchrashuvlari haqida ma'lumotlar. Sizni qiziqtirgan savollarni berishingiz mumkin."
+                tabindex="0">Kompaniyamizning keyingi uchrashuvlari haqida ma'lumotlar. Sizni qiziqtirgan savollarni
+                berishingiz mumkin.</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Mijozlar bilan Muloqot">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=13" class="card-img-top" alt="Mijozlar bilan Muloqot"
+              loading="lazy" aria-label="Yangilik: Mijozlar bilan Muloqot rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Mijozlar bilan Muloqot" tabindex="0">Mijozlar bilan Muloqot</h5>
+              <p class="card-text"
+                aria-label="Mijozlarimiz bilan muloqot o'rnatish, ularning ehtiyojlarini yaxshiroq tushunish maqsadida qiziqarli uchrashuvlar o'tkazmoqdamiz."
+                tabindex="0">Mijozlarimiz bilan muloqot o'rnatish, ularning ehtiyojlarini yaxshiroq tushunish maqsadida
+                qiziqarli uchrashuvlar o'tkazmoqdamiz.</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Innovatsion Texnologiyalar">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=14" class="card-img-top" alt="Innovatsion Texnologiyalar"
+              loading="lazy" aria-label="Yangilik: Innovatsion Texnologiyalar rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Innovatsion Texnologiyalar" tabindex="0">Innovatsion Texnologiyalar
+              </h5>
+              <p class="card-text"
+                aria-label="Bizning kompaniya innovatsion texnologiyalarni o'z ish jarayonlariga qo'shishni davom ettirmoqda. Sizni qiziqtirayotgan sohalarda yangi yechimlar kuting!"
+                tabindex="0">Bizning kompaniya innovatsion texnologiyalarni o'z ish jarayonlariga qo'shishni davom
+                ettirmoqda. Sizni qiziqtirayotgan sohalarda yangi yechimlar kuting!</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yangilik: Kompaniya Rivojlanishi">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=15" class="card-img-top" alt="Kompaniya Rivojlanishi"
+              loading="lazy" aria-label="Yangilik: Kompaniya Rivojlanishi rasmi">
+            <div class="card-body">
+              <h5 class="card-title" aria-label="Kompaniya Rivojlanishi" tabindex="0">Kompaniya Rivojlanishi</h5>
+              <p class="card-text"
+                aria-label="Kompaniyamizning o'sish va rivojlanishi haqida so'nggi yangiliklar. Siz ham bu jarayonning bir qismi bo'lishingiz mumkin!"
+                tabindex="0">Kompaniyamizning o'sish va rivojlanishi haqida so'nggi yangiliklar. Siz ham bu jarayonning
+                bir qismi bo'lishingiz mumkin!</p>
+              <a href="#" class="btn btn-primary">Batafsil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="tariflar" class="pricing-section py-5 bg-light" aria-labelledby="pricingLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="pricingLabel" tabindex="0">Bizning Tariflar</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Oddiy Paket">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Oddiy Paket" tabindex="0">Oddiy Paket</h5>
+              <p class="card-text"
+                aria-label="Asosiy xizmatlar bilan tanishing. Oddiy paket barcha boshlang'ich ehtiyojlaringizni qoplaydi."
+                tabindex="0">Asosiy xizmatlar bilan tanishing. Oddiy paket barcha boshlang'ich ehtiyojlaringizni
+                qoplaydi.</p>
+              <p class="display-6 fw-bold" aria-label="Narxi: $29 / oyiga" tabindex="0">$29 / oyiga</p>
+              <a href="#" class="btn btn-primary">Tanlash</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="O'rtacha Paket">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="O'rtacha Paket" tabindex="0">O'rtacha Paket</h5>
+              <p class="card-text"
+                aria-label="Ko'proq imkoniyatlar bilan o'rtacha paket sizning biznesingizga yordam beradi."
+                tabindex="0">Ko'proq imkoniyatlar bilan o'rtacha paket sizning biznesingizga yordam beradi.</p>
+              <p class="display-6 fw-bold" aria-label="Narxi: $59 / oyiga" tabindex="0">$59 / oyiga</p>
+              <a href="#" class="btn btn-primary">Tanlash</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Yuqori Sifatli Paket">
+          <div class="card shadow border-0 rounded">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Yuqori Sifatli Paket" tabindex="0">Yuqori Sifatli Paket</h5>
+              <p class="card-text" aria-label="Eng yuqori darajadagi xizmatlar va eksklyuziv qo'llab-quvvatlash."
+                tabindex="0">Eng yuqori darajadagi xizmatlar va eksklyuziv qo'llab-quvvatlash.</p>
+              <p class="display-6 fw-bold" aria-label="Narxi: $99 / oyiga" tabindex="0">$99 / oyiga</p>
+              <a href="#" class="btn btn-primary">Tanlash</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="jamoa" class="team-section py-5" aria-labelledby="teamLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="teamLabel" tabindex="0">Bizning Jamoa</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Ali Abdullayev - Loyiha Menejeri">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=10" class="card-img-top" alt="Ali Abdullayev" loading="lazy"
+              aria-label="Ali Abdullayev">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Ali Abdullayev" tabindex="0">Ali Abdullayev</h5>
+              <p class="card-text" aria-label="Loyiha Menejeri" tabindex="0">Loyiha Menejeri</p>
+              <p class="text-muted"
+                aria-label="Ali loyihalarni boshqarish bo'yicha tajribaga ega va mijozlar bilan samarali aloqa o'rnatadi."
+                tabindex="0">Ali loyihalarni boshqarish bo'yicha tajribaga ega va mijozlar bilan samarali aloqa
+                o'rnatadi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Oyxon Shodmonov - Dizayner">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=11" class="card-img-top" alt="Oyxon Shodmonov" loading="lazy"
+              aria-label="Oyxon Shodmonov">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Oyxon Shodmonov" tabindex="0">Oyxon Shodmonov</h5>
+              <p class="card-text" aria-label="Dizayner" tabindex="0">Dizayner</p>
+              <p class="text-muted" aria-label="Oyxon innovatsion va estetik dizaynlar yaratishda kuchli tajribaga ega."
+                tabindex="0">Oyxon innovatsion va estetik dizaynlar yaratishda kuchli tajribaga ega.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 scale" tabindex="0" aria-label="Nodira Mirzaeva - Texnik Mutaxassis">
+          <div class="card shadow border-0 rounded">
+            <img src="https://picsum.photos/400/300?random=12" class="card-img-top" alt="Nodira Mirzaeva" loading="lazy"
+              aria-label="Nodira Mirzaeva">
+            <div class="card-body text-center">
+              <h5 class="card-title" aria-label="Nodira Mirzaeva" tabindex="0">Nodira Mirzaeva</h5>
+              <p class="card-text" aria-label="Texnik Mutaxassis" tabindex="0">Texnik Mutaxassis</p>
+              <p class="text-muted"
+                aria-label="Nodira texnologik yechimlar bilan shug'ullanadi va jamoaning barcha texnik ehtiyojlarini qondiradi."
+                tabindex="0">Nodira texnologik yechimlar bilan shug'ullanadi va jamoaning barcha texnik ehtiyojlarini
+                qondiradi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="aloqa" class="contact-section py-5" aria-labelledby="contactLabel">
+    <div class="container">
+      <h2 class="text-center mb-5 mt-5 display-4 fw-bold" id="contactLabel" tabindex="0">Biz bilan Aloqa</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card shadow border-0 rounded" aria-labelledby="addressLabel">
+            <div class="card-body">
+              <h5 class="card-title" id="addressLabel" tabindex="0">Bizning Manzil</h5>
+              <p class="card-text" tabindex="0">Tashkent, Uzbekistan, Main St. 123</p>
+              <h5 class="card-title" tabindex="0">Aloqa Telefonlari</h5>
+              <p class="card-text" tabindex="0">+998 71 123 45 67</p>
+              <h5 class="card-title" tabindex="0">Email Manzil</h5>
+              <p class="card-text" tabindex="0">info@yourcompany.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form aria-label="Aloqa formasi">
+            <div class="mb-3">
+              <label for="name" class="form-label">Ism</label>
+              <input type="text" class="form-control" id="name" placeholder="Ismingizni kiriting" required
+                aria-required="true">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Manzil</label>
+              <input type="email" class="form-control" id="email" placeholder="Emailingizni kiriting" required
+                aria-required="true">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Xabar</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Xabaringizni kiriting" required
+                aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" aria-label="Yuborish tugmasi">Yuborish</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section bg-dark text-light py-5" aria-labelledby="footerLabel">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase fw-semibold" id="aboutUsLabel" tabindex="0">Biz haqimizda</h5>
+          <p tabindex="0">Bizning kompaniyamiz yuqori sifatli mahsulotlar va xizmatlar taklif etadi. Mijozlarimizning
+            qoniqishi biz uchun juda muhim.</p>
+          <p tabindex="0">&copy; 2024 Furni. Barcha huquqlar himoyalangan.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase" id="quickLinksLabel" tabindex="0">Tezkor Havolalar</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#home" class="text-light" aria-label="Bosh sahifaga o'tish">Bosh sahifa</a></li>
+            <li><a href="#shop" class="text-light" aria-label="Do'konga o'tish">Do'kon</a></li>
+            <li><a href="#about" class="text-light" aria-label="Biz haqimizda sahifasiga o'tish">Biz haqimizda</a></li>
+            <li><a href="#services" class="text-light" aria-label="Xizmatlar sahifasiga o'tish">Xizmatlar</a></li>
+            <li><a href="#blog" class="text-light" aria-label="Blog sahifasiga o'tish">Blog</a></li>
+            <li><a href="#contact" class="text-light" aria-label="Aloqa sahifasiga o'tish">Aloqa</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-uppercase" id="contactLabel" tabindex="0">Biz bilan Bog'laning</h5>
+          <p tabindex="0">Email: info@furni.com</p>
+          <p tabindex="0">Telefon: +998 71 123 45 67</p>
+          <p tabindex="0">Manzil: Tashkent, Uzbekistan</p>
+          <h5 class="text-uppercase" id="socialMediaLabel" tabindex="0">Ijtimoiy Tarmoqlar</h5>
+          <ul class="list-unstyled d-flex">
+            <li class="me-3"><a href="#" class="text-light" aria-label="Facebook sahifamizga o'tish"><i
+                  class="fab fa-facebook-f"></i></a></li>
+            <li class="me-3"><a href="#" class="text-light" aria-label="Twitter sahifamizga o'tish"><i
+                  class="fab fa-twitter"></i></a></li>
+            <li class="me-3"><a href="#" class="text-light" aria-label="Instagram sahifamizga o'tish"><i
+                  class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="text-light" aria-label="LinkedIn sahifamizga o'tish"><i
+                  class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="backToTop" class="btn btn-primary position-fixed bottom-0 end-0 m-3 zindex-fixed"
+    aria-label="Yuqoriga qaytish">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
